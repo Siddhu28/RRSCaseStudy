@@ -1,4 +1,4 @@
-/*package com.admin.AdminContactService.Services;
+package com.admin.AdminContactService.Services;
 
 import com.admin.AdminContactService.Repository.ContactRepository;
 import com.admin.AdminContactService.model.Contact;
@@ -32,4 +32,3 @@ public class ContactService {
         contactRepository.delete(contact);
     }
 }
-*/
