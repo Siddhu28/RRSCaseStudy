@@ -8,10 +8,10 @@
 		<version>2.6.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.api-gatwway</groupId>
-	<artifactId>ApiGateWayRRS</artifactId>
+	<groupId>com.API</groupId>
+	<artifactId>Gateway-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ApiGateWayRRS</name>
+	<name>Gateway-api</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>

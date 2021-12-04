@@ -18,8 +18,8 @@ spring:
             - Path=/contacts/**
 
 
-        - id: booking-train-service
-          uri: lb://booking-train-service
+        - id: train-order-service
+          uri: lb://train-order-service
           predicates:
             - Path=/booking/**
 
