@@ -7,10 +7,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+
 @SpringBootApplication
 //@EnableSwagger2
 @EnableEurekaClient
-
+@OpenAPIDefinition
 public class BookingTicketServiceApplication {
 
 	public static void main(String[] args) {
