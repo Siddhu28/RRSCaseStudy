@@ -16,23 +16,22 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class Security extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http)throws Exception{
-		 http
-         .httpBasic()
-         .and()
-         .authorizeRequests()
-		 .antMatchers("/booking/booked/").permitAll()
+		http
+		.csrf().disable()
+				.formLogin().disable()
+		.authorizeRequests()
+				.antMatchers("/booking/booked/").permitAll()
 		.antMatchers("/booking/addBooking/","/booking/update/","/booking/del/").hasRole("ADMIN")
 		.anyRequest()
-        .authenticated()
-        .and()
-        .csrf().disable()
-        .formLogin().disable();
+		.authenticated()
+		.and()
+		.httpBasic();
 	}
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth)throws Exception {
-		auth.inMemoryAuthentication().withUser("Siddharth").password(this.pass().encode("Sid28")).roles("ADMIN");
-		auth.inMemoryAuthentication().withUser("Siddhu").password(this.pass().encode("Sid28")).roles("USER");
-		//auth.inMemoryAuthentication().withUser("Sid").password("Sid28").roles("USER");
+		auth.inMemoryAuthentication().withUser("Bhartesh").password(this.pass().encode("Bhartesh19")).roles("ADMIN");
+		auth.inMemoryAuthentication().withUser("Siddu").password(this.pass().encode("sid14")).roles("USER");
+		//auth.inMemoryAuthentication().withUser("Titiksha").password("Titu14").roles("USER");
 	}
 	 @Bean
 	    public PasswordEncoder pass(){

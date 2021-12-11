@@ -33,9 +33,11 @@ public class TicketOrderController {
 
 	@PostMapping("/addBooking")
 	public String saveBook(@RequestBody BookingTicket ticket) {
-	ticketrepository.save(ticket);
-	return "Booked ticket with id :  " + ticket.getId()+"And Train ID is "+ticket.getTrainId();
+		ticketrepository.save(ticket);
+		return "Booked ticket with id :  " + ticket.getId()+"  And Train ID is "+ticket.getTrainId();
     }
+
+
 
 
 	@GetMapping("/booked/{trainId}")
@@ -47,6 +49,12 @@ public class TicketOrderController {
 		bookingTicket.setTrains(booking);
 		return bookingTicket;
 	}
+
+
+
+
+
+
 
 
 	@PutMapping("/update/{id}")
