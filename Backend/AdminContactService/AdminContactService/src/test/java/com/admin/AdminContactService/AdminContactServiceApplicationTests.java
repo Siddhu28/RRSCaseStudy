@@ -1,4 +1,4 @@
-package com.admin.AdminContactService;
+/*package com.admin.AdminContactService;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -42,4 +42,4 @@ class AdminContactServiceApplicationTests {
 			System.out.println("Save Contact Test Case Passed");
 		}
 
-}
+}*/

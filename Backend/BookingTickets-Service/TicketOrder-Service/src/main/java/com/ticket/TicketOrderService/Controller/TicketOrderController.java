@@ -37,9 +37,6 @@ public class TicketOrderController {
 		return "Booked ticket with id :  " + ticket.getId()+"  And Train ID is "+ticket.getTrainId();
     }
 
-
-
-
 	@GetMapping("/booked/{trainId}")
 	public BookingTicket getBooking(@PathVariable("trainId") String trainId){
 		BookingTicket bookingTicket=this.bookingService.getBooking(trainId);
