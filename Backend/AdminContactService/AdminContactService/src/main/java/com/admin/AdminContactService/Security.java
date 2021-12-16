@@ -21,7 +21,6 @@ public class Security extends WebSecurityConfigurerAdapter {
         .httpBasic()
         .and()
         .authorizeRequests()
-        .antMatchers("/contacts/**").hasRole("ADMIN")
         .anyRequest()
         .authenticated()
         .and()
@@ -35,12 +34,13 @@ public class Security extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication().withUser("Siddharth").password(this.passwordEncoder().encode("Sid28")).roles("ADMIN");
     }*/
 
+	@SuppressWarnings("deprecation")
 	@Bean
-	public PasswordEncoder passwordEncoder1() {
+	public PasswordEncoder passwordEncoder() {
+		
 		return NoOpPasswordEncoder.getInstance();
-
 	}
-	
+
     /*@Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder(10);

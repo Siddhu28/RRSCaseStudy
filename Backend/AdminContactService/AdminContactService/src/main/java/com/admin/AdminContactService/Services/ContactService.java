@@ -19,12 +19,12 @@ public class ContactService implements UserDetailsService {
     private ContactRepository contactRepository;
     
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Contact foundedUser=contactRepository.findByUsername(username);
-		if (foundedUser==null) {
+		Contact foundedAdmin =contactRepository.findByUsername(username);
+		if (foundedAdmin==null) {
 			return null;
 		}
-		String user=foundedUser.getUsername();
-		String pass=foundedUser.getPassword();
+		String user=foundedAdmin.getUsername();
+		String pass=foundedAdmin.getPassword();
 		return new User(user, pass,new ArrayList<>());
 }
     
