@@ -8,6 +8,7 @@ import com.ticket.TicketOrderService.Entity.Train;
 import com.ticket.TicketOrderService.Repository.TicketOrderRepository;
 import com.ticket.TicketOrderService.Service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-//@CrossOrigin("http://localhost:3000")
+@CrossOrigin("http://localhost:3000")
 @RequestMapping("/booking")
 public class TicketOrderController {
 

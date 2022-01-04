@@ -20,8 +20,8 @@ public class Security extends WebSecurityConfigurerAdapter{
 		.csrf().disable()
 				.formLogin().disable()
 		.authorizeRequests()
-				.antMatchers("/booking/booked/").permitAll()
-		.antMatchers("/booking/addBooking/","/booking/update/","/booking/del/").hasRole("ADMIN")
+				.antMatchers("/booking/**").permitAll()
+//		.antMatchers("/booking/addBooking/","/booking/update/","/booking/del/").permitAll()
 		.anyRequest()
 		.authenticated()
 		.and()
@@ -31,7 +31,7 @@ public class Security extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder auth)throws Exception {
 		auth.inMemoryAuthentication().withUser("Siddharth").password(this.pass().encode("Sid28")).roles("ADMIN");
 		auth.inMemoryAuthentication().withUser("Siddhu").password(this.pass().encode("Sid28")).roles("USER");
-		//auth.inMemoryAuthentication().withUser("Titiksha").password("Titu14").roles("USER");
+		
 	}
 	 @Bean
 	    public PasswordEncoder pass(){
