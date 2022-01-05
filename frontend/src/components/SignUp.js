@@ -97,17 +97,17 @@ class SignUp extends Component {
     render() {
         return (
             
-            <section className="vh-30" style={{backgroundColor: "#red"}}>
-                <center>
-                    <br></br>      
-            <div className="container h-30">
+            // <section className="vh-30" style={{backgroundColor: "#red"}}>
+                // <center>
+                //     <br></br>      
+            <div className="container h-10">
               <div className="row d-flex justify-content-center align-items-center h-30">
                 <div className="col-lg-12 col-xl-11">
                   <div className="card text-black" style={{borderRadius: "25px"}}>
-                    <div className="card-body p-md-5">
+                    <div className="card-body p-md-3">
                       <div className="row justify-content-center">
-                        <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-          
+                        <div className="col-md-10 col-lg-2 col-xl-5 order-2 order-lg-1">
+                          
                           <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
           
                         <form>
@@ -176,11 +176,12 @@ class SignUp extends Component {
 <p className="text-center text-muted mt-5 mb-0">Have already an account? <Link to="/Login" className="fw-bold text-body"><u>Login here</u></Link></p>
 
 </form>          
+
                         </div>
                         <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
           
                           <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" className="img-fluid" alt="Sample image"/>
-          
+                          
                         </div>
                       </div>
                     </div>
@@ -188,10 +189,10 @@ class SignUp extends Component {
                 </div>
               </div>
             </div>
-            </center>
-            <br></br>
+            // </center>
+            // <br></br>
            
-          </section>
+          // </section>
           
         
     );}

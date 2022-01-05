@@ -29,6 +29,7 @@ export class LogInCls extends Component {
         })
         .catch(err=>{
             alert('Your userID or password is Incorrect')
+           
             console.log(err)
 
         })
